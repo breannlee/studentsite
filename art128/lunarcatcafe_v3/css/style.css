@@ -1,0 +1,719 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #SIMPLE RESET
+        #CONTAINER
+        #MEDIAQUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-id (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+
+
+/* TYPOGRAPHY */
+body {
+    font-size: 87.5%; /* 14px */
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: rgba(0,0,0,.8);
+}
+
+/* HEADINGS */
+/* 
+    Based on a Traditional Typographic Scale
+    48, 36, 24, 21, 18, 16
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: .5em 0;
+    font-family: "Helvetica Rounded";
+}
+
+h1 {
+    font-size: 3em; /* 48px */
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.25em; /* 36px */
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 1.5em; /* 24px */
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.3125em; /* 21px */
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.125em; /* 18px */
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 1em; /* 16px */
+    line-height: 1.5;
+}
+
+/* PARAGRAPHS */
+p {
+    margin: .5em 0;
+    max-width: 38em;
+}
+
+/* LINKS */
+ a {
+     color: rgba(0, 0, 153, 0.8);
+     text-decoration: none;
+ }
+ a:hover {
+    color: rgba(0,0,153,1);
+    text-decoration: underline;
+}
+
+/* HELPER CLASSES */
+.text-centered {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.full-width {
+    max-width: none;
+    width: 100%;
+}
+.horiz-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+@media (min-width: 768px) {
+    .hide-on-largescreens {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTONS */
+.button,
+form input[type="submit"],
+button {
+    font-size: inherit;
+    line-height: 1;
+    background-color: #e0d3c4;
+    border: 1px solid #4c4c4e;
+    color: #42322d;;
+    padding: 1em;
+    display: inline-block;
+    margin: .5em .5em .5em 0;
+    text-align: center;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover,
+form input[type="submit"]:hover,
+button:hover {
+    background-color: #b6a088;
+    border-color: #252527;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+}
+
+.button.alt {
+    background-color: transparent;
+    color: rgba(0,0,153,1);
+}
+
+.button.alt:hover {
+    background-color: rgba(0,0,153,1);
+    color: rgba(255,255,255,1);
+}
+
+/* LAYOUT */
+
+/* SIMPLE RESET */
+* { box-sizing: border-box; }
+body { margin: 0;}
+
+/* CONTAINER */
+.header-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+   /* TABLET SIZED STYLING GOES HERE */
+   
+}
+
+@media (min-width: 1050px) {
+    body {
+        font-size: 100%; /* 16px */
+    }
+}
+
+@media (min-width: 1250px) {
+    body {
+        font-size: 112.5%; /* 18px */
+    }
+    .header-footer {
+        max-width: 1200px;
+    }
+}
+
+
+/* FOR DEMO PURPOSES ONLY */
+body.demo {
+    padding-top: 2em;
+}
+body.demo::before {
+    content: "Small (Mobile) Less Than 768px";
+    background-color: #933;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: white;
+    padding: .5em;
+} 
+
+@media (min-width: 768px) {
+    body.demo::before {
+        background-color: #bcb83d;
+        content: "Midsize (Tablet) Screen 768px - 1050px";
+    } 
+}
+
+@media (min-width: 1050px) {
+    body.demo::before {
+        background-color: #693;
+        content: "Large (Notebook) Screen 1050px - 1250px";
+    } 
+}
+
+@media (min-width: 1250px) {
+    body.demo::before {
+        background-color: #09c;
+        content: "Extra Large (Desktop) Screen 1250px +";
+    } 
+}
+
+/* SEMANTIC GRID SYSTEM */
+
+.row > .column {
+    margin-bottom: 4%;
+}
+
+@media (min-width: 768px) {
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        /* margin-left: -2%;
+        margin-right: -2%; */
+    }
+    .row > .column:first-child {
+        margin-left: 0;
+    }
+    .row > .column:last-child {
+        margin-right: 0;
+    }
+
+    .row > .column {
+        flex-grow: 1;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .row > .column.one-half {
+        max-width: 46%;
+    }
+
+    .row > .column.one-third {
+        max-width: 29.3333%;
+    }
+
+    .row > .column.two-thirds {
+        max-width: 62.6666%;
+    }
+
+    .row > .column.one-fourth {
+        max-width: 21%;
+    }
+
+    .row > .column.centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/* FOR DEMO PURPOSES ONLY */
+.demo .column {
+    background: rgba(0,0,0,.2);
+    padding: 1em;
+    text-align: center;
+}
+
+/* SITE STRUCTURE */
+
+/* SITE HEADER */
+.site-header {
+    background-color: #daba97;
+    padding: 1em 0;
+}
+
+/* ON LARGER SCREENS PLACE LOGO LEFT AND NAV RIGHT */
+@media (min-width: 768px) {
+    .site-header .header-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* STYLING FOR BOTH HEADER AND FOOTER */
+.site-header a,
+.site-footer a {
+    color: rgba(0,0,0,.8);
+}
+.site-header a:hover,
+.site-footer a:hover {
+    color: rgba(0,0,0,1);
+    text-decoration: none;
+}
+
+/* LOGO AREA */
+.site-id h1 {
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: .55em;
+    text-align: center;
+}
+
+/* SITE NAV */
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.site-nav a {
+    display: block;
+    padding: 1em;
+}
+
+.site-nav .menu-button {
+    display: none;
+}
+
+
+/* TOGGLE NAV */
+@media (max-width: 767px) {
+
+    .toggle-nav .site-id {
+        position: absolute;
+    }
+    .toggle-nav .site-nav {
+        text-align: right;
+    }
+    .toggle-nav .site-nav .menu-button {
+        font-size: inherit;
+        background-color: transparent;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        padding: .3em .8em;
+        margin-bottom: .8em;
+        border: 1px solid black;
+    }
+    .toggle-nav .site-nav .menu-button::selection {
+        background-color: rgba(255,255,255,0);
+    }
+    .toggle-nav .site-nav ul {
+        display: block;
+        text-align: center;
+    }
+    .toggle-nav .site-nav a:hover {
+        background-color: rgb(99, 67, 38);
+        color: white;
+    }
+    .toggle-nav[data-navstate="closed"] ul {
+        height: 0;
+        overflow: hidden;
+    }
+    .toggle-nav[data-navstate="open"] ul {
+        height: auto;
+        overflow: visible;
+    }
+
+    /* NAVICON */
+    .toggle-nav .site-nav .menu-button.navicon {
+        border: none;
+        color: rgba(255,255,255,0);
+        padding: 0;
+    }
+    .toggle-nav .site-nav .menu-button.navicon::after {
+        content: "\2630";
+        display: inline-block;
+        padding: .2em 0;
+        margin: 0;
+        color: rgba(0,0,0,.8);
+        font-size: 1.5em;
+    }
+    .toggle-nav[data-navstate="open"] .site-nav .menu-button.navicon::after {
+        content: "\2715";
+    }
+
+}
+
+/* ARTICLES */
+article {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article h1,
+article h1 + .subhead,
+article .date {
+    text-align: center;
+}
+
+article h2.subhead {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+article .subhead {
+    font-weight: normal;
+    opacity: .7;
+}
+
+article .date {
+    font-size: .75em;
+    opacity: .5;
+    margin-bottom: 3em;
+}
+
+article p + h1,
+article p + h2,
+article p + h3,
+article p + h4,
+article p + h5,
+article p + h6 {
+    margin-top: 1.5em;
+}
+
+
+/*--------------------- HEADER AND BG ------------------*/
+/*body {
+    background-color: #e0d3c4;
+} */
+
+/* GO TO SITE HEADER TO CHANGE THE TOP COLOR LATER!!!! */
+
+/* ----------------------------------- HERO ------------------------------- */
+.hero {
+    background-image: url('../img/hero-cat.jpg');
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    color: white;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* ------------------- MEET THE CATS ---------------------------- */
+.cats {
+    padding: 4em 4%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.cats h2 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.cats p {
+    margin-top: 2em;
+}
+
+
+img {
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+
+
+* {box-sizing:border-box}
+
+/* SLIDESHOW */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    }
+
+/* DISPLAY NONE FOR IMAGES */
+.slides {
+    display: none;
+}
+
+/* ARROWS */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgba(0,0,0,1);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* NEXT BUTTON TO THE RIGHT */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* HOVER ARROW */
+.prev:hover, .next:hover {
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.8);
+    color: rgba(255, 255, 255, 0.795);
+}
+
+/* CAPTION */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* DOTS */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* FADING ANIMATION */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* ---------------------------------- ADOPTION ------------------------------ */
+.adopt {
+    background-image: url('../img/kittens.jpg');
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    color: white;
+    height: 1100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.adopt-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.adopt-content h2 {
+    text-shadow: 2px 2px 4px #000000;
+    padding: 3px;
+}
+
+.adopt-content h3 {
+    line-height: 2;
+}
+
+.adopt-content p {
+    color: rgba(255, 255, 255, 0.822);
+    text-align: justify;
+}
+
+.adopt-content li {
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.822);
+}
+
+#fees {
+    border-collapse: collapse;
+    border-color: rgba(255, 255, 255, 0.822);
+    width: 100%;
+    color: rgba(255, 255, 255, 0.822);
+    font-family: 'Open Sans', sans-serif;
+}
+
+#fees th {
+    border: 1px solid;
+    padding: 8px;
+}
+
+
+.reservation {
+    align-content: center;
+    text-align: center;
+    margin: 100px;
+    font-size: 1.5em;
+    font-family: "Helvetica Rounded";
+}
+
+/*-------------------------------------------- VISIT -----------------------------------------*/
+.visit {
+    background-image: url('../img/map.jpg');
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    color: white;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.visit-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.visit-content h2 {
+    text-shadow: 2px 2px 4px #000000;
+    padding: 3px;
+    line-height: 2;
+}
+
+.visit-content h3 {
+    line-height: 1.5;
+}
+
+.visit-content p {
+    color: rgba(255, 255, 255, 0.822);
+    margin: 20px;
+}
+
+#hours {
+    color: rgba(255, 255, 255, 0.822);
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#hours th {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*-------------------------------------------- CONTACT -----------------------------------------*/
+.site-footer {
+    background-color: #f0dac1;
+    padding: 1em 0;
+}
+
+.site-footer ul {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}

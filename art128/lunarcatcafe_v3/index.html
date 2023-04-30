@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lunar Cat Cafe</title>
+  <meta name="description" content="This is a starter HTML + CSS + JS boilerplate set of code for website projects" />
+
+  <!-- FOR MOBILE / SMALL SCREENS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FOR IE -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- OPEN SANS FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header id="top" class="site-header toggle-nav" data-navstate="closed">
+    <div class="header-footer">
+      <div class="site-id">
+        <h1><a href="#top"class="scroll" >Lunar Cat Cafe</a></h1>
+      </div>
+      <nav class="site-nav">
+        <div class="menu-button navicon">Menu</div>
+        <ul>
+          <li><a class="scroll" href="#about">About</a></li>
+          <li><a class="scroll" href="#meetthecats">Meet the Cats</a></li>
+          <li><a class="scroll" href="#adoption">Adoption</a></li>
+          <li><a class="scroll" href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+<!--------------------------------- ABOUT ------------------------------->
+
+    <section class="hero" id="about">
+      <div class="hero-content">
+        <h1>
+          LUNAR CAT CAFE
+        </h1>
+
+        <h2>
+          About
+        </h2>
+
+        <p>
+          Enjoy pastries and beverages in a quiet cafe with our friendly adoptable cats that were rescued.
+        </p>
+
+      </div>
+    </section>
+
+<!--------------------------------- MEET THE CATS ------------------------------->
+
+<section class="cats" id="meetthecats">
+  <div class="cats-content">
+
+    <h2>
+      MEET THE CATS
+    </h2>
+
+<!-------------------------- SLIDESHOW ---------------------------->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+      <img src="img/cat-1.jpg" style="width:100%">
+      <div class="text">Luna</div>
+  </div>
+
+  <div class="mySlides fade">
+      <img src="img/cat-2.jpg" style="width:100%">
+      <div class="text">Dodo</div>
+  </div>
+
+  <div class="mySlides fade">
+      <img src="img/cat-3.jpg" style="width:100%">
+      <div class="text">Choco</div>
+  </div>
+
+  <div class="mySlides fade">
+      <img src="img/cat-4.jpg" style="width:100%">
+      <div class="text">Manju</div>
+  </div>
+
+  <div class="mySlides fade">
+      <img src="img/cat-5.jpg" style="width:100%">
+      <div class="text">Snow</div>
+  </div>
+
+  <div class="mySlides fade">
+      <img src="img/cat-6.jpg" style="width:100%">
+      <div class="text">Tuna</div>
+  </div>
+
+  <div class="mySlides fade">
+      <img src="img/cat-7.jpg" style="width:100%">
+      <div class="text">Mochi</div>
+  </div>
+
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+
+ 
+  </div>
+</section>
+
+<!--------------------------------- ADOPTION ------------------------------->
+<section class="adopt" id="adoption">
+  <div class="adopt-content">
+
+    <h2>ADOPTION</h2>
+    <h3>HOW TO ADOPT</h3>
+    <p>To help you and the cats find a good match, potential adopters are required to meet and spend time getting to know the cats before applying to adopt. You can meet the cats by visiting during our regular hours.</p>
+
+    <h3>FEES</h3>
+    <p>Adoption fees are based on age and set by the Hawaiian Humane Society.</p>
+
+  <table id="fees">
+    <tr>
+      <th>6 months & younger</th>
+      <th>$100</th>
+    </tr>
+
+    <tr>
+      <th>7 months to 5 years</th>
+      <th>$50</th>
+    </tr>
+
+    <tr>
+      <th>6 years +</th>
+      <th>$25</th>
+    </tr>
+
+    <tr>
+      <th>6 years +</th>
+      <th>waived for 55+</th>
+    </tr>
+
+  </table>
+
+    <h3>HEALTH DETAILS</h3>
+    <p>All of the cats have received the following medical care:</p>
+
+      <li>Spay/Neuter</li>
+      
+      <li>Microchip</li>
+      
+      <li>Flea/parasite treatment</li>
+      
+      <li>FIV/FeLV Negative</li>
+      
+      <li>Vaccinated</li>
+      
+       
+      
+      <p>Adopters will receive a copy of the medical records.</p>
+
+  </div>
+</section>
+
+<div class="reservation">
+  <a href="#" class="button">MAKE A RESERVATION</a>
+</div>
+
+<!--------------------------------- VISIT ------------------------------->
+<section class="visit" id="visit">
+  <div class="visit-content">
+
+    <h2>VISIT</h2>
+
+    <h3>HOURS</h3>
+
+
+
+    <table id="hours">
+      <tr>
+        <th>Monday - Friday</th>
+        <th>10am - 7pm</th>
+      </tr>
+
+      <tr>
+        <th>Saturday - Sunday</th>
+        <th>10am - 8pm</th>
+      </tr>
+
+    </table>
+
+    <p>415 Kapahulu Ave, Honolulu, HI 96815</p>
+
+
+<!--------------------------------- CONTACT ------------------------------->
+  </main>
+
+
+
+  <footer class="site-footer">
+    <div class="header-footer">
+
+      <div class="row">
+        <div class="column one-half">
+          <h4>Contact</h4>
+          <p>lunarcatcafe@gmail.com</p>
+        </div>
+        <div class="column one-half">
+          <nav class="social-nav">
+            <ul>
+              <li><a class="scroll" href="#">Instagram</a></li>
+              <li><a class="scroll" href="#">Twitter</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+  <!-- SCROLL JS FILE -->
+  <script src="js/scroll.js"></script>
+
+    <!-- MAIN JS FILE -->
+    <script src="js/script.js"></script>
+
+    <script src="js/slideshow.js"></script>
+
+</body>
+
+</html>
