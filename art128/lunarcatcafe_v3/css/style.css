@@ -535,7 +535,7 @@ img {
     padding: 16px;
     color: rgba(0,0,0,1);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 3.125em;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -550,7 +550,6 @@ img {
 /* HOVER ARROW */
 .prev:hover, .next:hover {
     text-decoration: none;
-    background-color: rgba(0,0,0,0.8);
     color: rgba(255, 255, 255, 0.795);
 }
 
