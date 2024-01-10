@@ -1,24 +1,38 @@
 /* GLOBAL RESET */
-* { box-sizing: border-box; }
-body { margin: 0; }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
 
 /* GLOBAL COLORS */
-body { color: rgba(0, 0, 0, 0.8); }
-a { color: rgba(0, 102, 204, 1); }
-a:hover { color: rgba(0, 51, 153, 1); }
+body {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+a {
+    color: rgba(0, 102, 204, 1);
+}
+
+a:hover {
+    color: rgba(0, 51, 153, 1);
+}
 
 /* GLOBAL TYPOGRAPHY */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 88.75%; /* 14px */
-  line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 88.75%;
+    /* 14px */
+    line-height: 1.4;
 }
 
 /* SITE STRUCTURE */
 
 header {
     background-color: rgb(112, 83, 136);
-    color: rgba(0, 0, 0, 0.8); 
+    color: rgba(0, 0, 0, 0.8);
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -48,14 +62,14 @@ header a:hover {
     list-style: none;
 }
 
-.site-nav  a {
+.site-nav a {
     display: block;
     padding: 1em;
 }
 
 /* MAIN */
 main {
-    background: rgba(0,0,0,.05);
+    background: rgba(0, 0, 0, .05);
 }
 
 /* HERO SECTION */
@@ -98,7 +112,7 @@ main {
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgba(0,0,0,.05);
+    border-top: 1px solid rgba(0, 0, 0, .05);
     padding: 1em;
 }
 
@@ -116,15 +130,17 @@ section {
 aside {
     padding: 2em 0;
 }
+
 @media (min-width: 768px) {
-.two-col-sidebar {
-    display: grid;
-    grid-template-columns: 20em auto;
+    .two-col-sidebar {
+        display: grid;
+        grid-template-columns: 20em auto;
     }
-.two-col-sidebar aside {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 0 3em 2em 0;
-    padding: .3em 2em 0 0;
+
+    .two-col-sidebar aside {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0 3em 2em 0;
+        padding: .3em 2em 0 0;
     }
 }
 
@@ -137,14 +153,14 @@ aside {
     list-style: none;
 }
 
-.social-nav  a {
+.social-nav a {
     display: block;
     padding: 1em;
 }
 
 /* STYLING FOR SUB PAGES */
 .page-sub .hero {
-    background-color:rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.8);
 }
 
@@ -158,6 +174,11 @@ aside {
 
 .project {
     margin: 2em;
+}
+
+.comingsoon {
+    color: #888;
+    text-decoration: none;
 }
 
 /* FOR DEV PURPOSES */
