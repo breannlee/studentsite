@@ -42,8 +42,6 @@ p {
 }
 
 
-
-
 header {
     background-color: rgb(67, 62, 68);
     display: flex;
@@ -126,6 +124,11 @@ main {
     color: white;
 }
 
+.pg-perspective a {
+    text-decoration: none;
+    color: white;
+}
+
 /* .card {
     background: #fff;
 } */
@@ -141,6 +144,17 @@ main {
 .card__info>*+* {
     margin-top: 0.5rem;
 } */
+
+/* TOURISM LOGO CASE STUDY */
+.tl-portfolio-hero {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20rem;
+    background-color: #9077a0;
+}
+
+
 
 footer {
     background-color: rgb(67, 62, 68);
